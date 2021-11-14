@@ -72,3 +72,22 @@ footer
 	bottom: 0;
 	width:100%;
 }
+
+@media (prefers-color-scheme: dark)
+{
+body 
+{
+	background-color: #1A1E24;
+	color:  #F8F8FF;
+}
+h1,h2,h3,h4,h5,h6,a
+{
+	color:  #F8F8FF;
+}
+hr{
+	color:  #F8F8FF;
+}
+hr:after
+{
+	background-color: #1A1E24;
+}
