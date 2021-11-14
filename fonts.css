@@ -1,0 +1,113 @@
+
+@font-face {
+  src: url('fonts/OutputSans-Hairline-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: normal;
+  font-weight: 250;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-HairlineItalic-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: italic;
+  font-weight: 250;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-Thin-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: normal;
+  font-weight: 250;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-ThinItalic-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: italic;
+  font-weight: 250;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-ExtraLight-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-ExtraLightItalic-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: italic;
+  font-weight: 200;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-Light-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-LightItalic-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-Regular-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-Italic-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-Medium-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-MediumItalic-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-Bold-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-BoldItalic-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: italic;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-Black-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  src: url('fonts/OutputSans-BlackItalic-Edu.woff') format("woff");
+  font-family: 'OutputSans';
+  font-style: italic;
+  font-weight: 800;
+}
+
