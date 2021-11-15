@@ -5,7 +5,7 @@ body
 h1 
 {
 	font-family: Palatino-Roman;
-	font-size: 55px;
+	font-size: 50px;
 	font-weight: 100;
 	color: #000000;
 	margin: 0;
@@ -16,6 +16,14 @@ h2
 	font-family: OutputSans;
 	font-weight: 500;
 	font-size: 31;
+	margin-bottom: 0;
+}
+h3
+{
+	max-width: 700px;
+	font-family: OutputSans;
+	font-weight: 300;
+	font-size: 24;
 	margin-bottom: 0;
 }
 h4
@@ -31,6 +39,13 @@ h4
         line-clamp: 3;
    	-webkit-box-orient: vertical;
 }
+details
+{
+	text-align: left;
+	font-family: OutputSans;
+	font-weight: 300;
+	width: 700;
+}
 nav
 {
 	margin-top: none;
@@ -42,7 +57,26 @@ a
 	font-weight: normal;
 	color: #000000;
 	text-decoration: none;
+	display: inline-block;
+  position: relative;
 }
+a:hover:after{
+	transform: scaleX(1);
+  transform-origin: bottom left;
+}
+a:after
+{
+	  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #F8F8FF;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  }
 hr {
     max-width: 700px;
     border: none;
@@ -68,11 +102,9 @@ blockquote,figcaption
 	font-weight: 300;
 	font-size: 12;
 }
-footer
+figcaption
 {
-	position: fixed;
-	bottom: 0;
-	width:100%;
+	text-align: right;
 }
 
 @media (prefers-color-scheme: dark)
