@@ -21,10 +21,19 @@ h2
 h3
 {
 	max-width: 700px;
+	text-align: left;
 	font-family: OutputSans;
 	font-weight: 300;
 	font-size: 24;
 	margin-bottom: 0;
+}
+ul
+{
+	max-width: 700px;
+}
+li
+{
+	text-align: left;
 }
 h4
 {
@@ -38,6 +47,22 @@ h4
    	-webkit-line-clamp: 3; /* number of lines to show */
         line-clamp: 3;
    	-webkit-box-orient: vertical;
+}
+p
+{
+	text-align: left;
+	max-width: 700px;
+	font-family: OutputSans;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+a.button
+{
+	 border-radius: 10px;
+	 align-items: left;
+  	 border: 1px solid #000000;
+  	 padding: 10px;
+	 margin-bottom: 10px;
 }
 details
 {
@@ -109,6 +134,14 @@ figcaption
 
 @media (prefers-color-scheme: dark)
 {
+a.button
+{
+	 border-radius: 10px;
+	 align-items: left;
+  	 border: 1px solid #FFFFFF;
+  	 padding: 10px;
+	 margin-bottom: 10px;
+}
 body 
 {
 	background-color: #1A1E24;
