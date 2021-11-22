@@ -98,7 +98,7 @@ a:after
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #F8F8FF;
+  background-color: #000000;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
   }
@@ -134,6 +134,10 @@ figcaption
 
 @media (prefers-color-scheme: dark)
 {
+a:after
+{
+	background-color: #F8F8FF;
+}
 a.button
 {
 	 border-radius: 10px;
