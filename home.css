@@ -2,30 +2,14 @@ body
 {
 	background: #F8F8FF;
 }
-h1 
+nav
 {
-	font-family: Palatino-Roman;
-	font-size: 50px;
-	font-weight: 100;
-	color: #000000;
-	margin: 0;
+margin-bottom: 1em;
 }
-h2
+pre
 {
-	max-width: 700px;
-	font-family: OutputSans;
-	font-weight: 500;
-	font-size: 31;
-	margin-bottom: 0;
-}
-h3
-{
-	max-width: 700px;
 	text-align: left;
-	font-family: OutputSans;
-	font-weight: 300;
-	font-size: 24;
-	margin-bottom: 0;
+	max-width: 700px;
 }
 ul
 {
@@ -35,7 +19,7 @@ li
 {
 	text-align: left;
 }
-h4
+article.h4
 {
 	max-width: 700px;
 	font-family: OutputSans;
@@ -47,14 +31,6 @@ h4
    	-webkit-line-clamp: 3; /* number of lines to show */
         line-clamp: 3;
    	-webkit-box-orient: vertical;
-}
-p
-{
-	text-align: left;
-	max-width: 700px;
-	font-family: OutputSans;
-	font-weight: normal;
-	margin-bottom: 0;
 }
 a.button
 {

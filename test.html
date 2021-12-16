@@ -1,0 +1,54 @@
+  <head>
+	<title>Using Pandoc</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/Users/quindarius/Documents/websites/quindarius.com/home.css">
+	<link rel="stylesheet" href="/Users/quindarius/Documents/websites/quindarius.com/fonts.css">
+	<link rel="stylesheet" href="/Users/quindarius/Documents/websites/quindarius.com/typography.css">
+  </head>
+  <body>
+  <center>
+	<a rel="author" href="../index.html">
+	<h1>
+		Quin'darius
+	</h1>
+	</a>
+<nav>
+	<a href="../projects.html">projects</a>
+	<span>.</span>
+	<a href="../articles.html">articles</a>
+	<span>.</span>
+	<a href="../contact.html">contact</a>
+	<span>.</span>
+	<a href="../about.html">about</a>
+	<span>.</span>
+	<a href="../rss">rss</a>
+</nav>
+<h2>
+	Using Pandoc
+</h2>
+<p>I am going to use Pandoc to convert Markdown files into custom built html pages for my website. This page here is the example and guide to see what is possible with doing so.</p>
+<h3>A tour of the headers available</h3>
+<h4>Fourth Header</h4>
+<p>Sample text for the third letter. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog.</p>
+<h5>Fifth Header</h5>
+<p>Sample text for the third letter. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog.</p>
+<h6>Sixth Header</h6>
+<p>Sample text for the third letter. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog. Blah blah blah blog.</p>
+<h4>Multi-line Code</h4>
+<p>This is how I am generating the files from Pandoc and consequently this is what multiline comments look like.</p>
+<pre><code>{
+pandoc -f markdown-auto_identifiers 
+--standalone 
+--template post-template.html 
+doc.md -o test.html
+}</code></pre>
+<footer>
+<figure>
+<blockquote>
+	This was just a simple example of what Pandoc is capable to do.	
+</blockquote>
+<figcaption>-Arthur Koziel <br/><cite>Convert Markdown to HTML with Pandoc</cite></figcaption>
+</figure>
+</footer>
+  </center>
+  </body>
