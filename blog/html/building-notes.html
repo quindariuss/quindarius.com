@@ -1,0 +1,159 @@
+<html lang=en>
+<head>
+	<title>quin'darius</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../css/home.css">
+	<link rel="stylesheet" href="../../css/fonts.css">
+	<link rel="stylesheet" href="../../css/typography.css">
+</head>
+<body>
+<center>
+<a rel=author href="./index.html">
+		<h1>
+			Quin'darius
+		</h1>
+	</a>
+<nav>
+	<a href="../../blog.html">blog</a>
+	<span>.</span>
+	<a href="../../articles.html">articles</a>
+	<span>.</span>
+	<a href="../../books.html">books</a>
+	<span>.</span>
+	<a href="../../about.html">about</a>
+</nav>
+<pre>
+Rebuilding my website
+================================================================================
+
+Before, my website was programmed by hand and looked like this: 
+
+website-image.png 
+
+In my opinion the website looked great and if I found a site anywhere as good I would email the owner so fast but now I know that I must automate it.
+Mainly for an appropriate blogging workflow. 
+I like to type my notes out in plain text and its a hassle converting it into html. 
+I want to automate it but in the current structure it doesn't seem likely. 
+Too many involved parts, going into all the articles.
+
+Simplifying 
+--------------------------------------------------------------------------------
+Content Structure 
+
+Home Page
+|__articles
+|  |__projects
+|  |__personal
+|  |__school
+|  |__client work
+|__blog
+|  |__daily note
+|__books
+|  |__book
+|     |__notes
+|     |__typesetting
+|__links
+|  |__blogs
+|__about
+   |__resume
+   |__contact information
+
+Directory Structure
+
+quindarius.com
+|__index.html
+|__404.html
+|__books.html
+|__articles.html
+|__about.html
+|  |__resume.pdf
+|  |__me.jpg
+|__blog/
+|  |__blog.html
+|  |__links.html
+|  |__blog-page.sh
+|__css/*
+|__fonts/*
+|__templates/
+   |__header.html
+   |__tags/
+      |__main.html
+      |__mmain.html
+      |__pre.html
+      |__ppre.html
+
+
+Today is: 
+Wed Jan  5 21:12:22 EST 2022
+
+I want to be able to get the home page, blog, and about done tonight.
+
+Blog
+--------------------------------------------------------------------------------
+
+I am outputting the post in a directory really well.
+Commands
+################################################################################
+$ ls -lhU
+-rw-r--r--  1 quindarius  staff   387B Jan  3 22:03 blog/changing-brightness.txt
+-rw-r--r--  1 quindarius  staff   784B Jan  3 22:03 blog/christmas-list.txt
+-rw-r--r--  1 quindarius  staff   8.4K Jan  3 22:03 blog/frank-predictions.txt
+-rw-r--r--  1 quindarius  staff   1.3K Jan  3 22:03 blog/hardtimes.txt
+-rw-r--r--  1 quindarius  staff    14K Jan  3 22:03 blog/root-evil.txt
+-rw-r--r--  1 quindarius  staff   3.6K Jan  3 22:03 blog/social-freedom.txt
+-rw-r--r--  1 quindarius  staff   2.8K Jan  3 22:03 blog/website-gameplan.txt
+
+$ awk '{printf("<a href=\"%s\"> %s %s -- %9</a>\n", $9,$6, $7, $9)}' blog-links.txt | sed 's/.txt/.html/g'
+<a href="changing-brightness.html"> Jan 3</a>
+<a href="christmas-list.html"> Jan 3</a>
+<a href="frank-predictions.html"> Jan 3</a>
+<a href="hardtimes.html"> Jan 3</a>
+<a href="root-evil.html"> Jan 3</a>
+<a href="social-freedom.html"> Jan 3</a>
+<a href="website-gameplan.html"> Jan 3</a>
+################################################################################
+
+Easy enough right? 
+Now I just need the text files for the blog converted into html files.
+
+I just want the header and text in the site
+
+This script works well.
+#
+cat head.html pre.html text/changing-brightness.txt ppre.html > test.html
+#
+
+Now I need to do it for the whole directory which should'nt be that bad.
+
+blog generator works.
+I want to add a title to all the post so I will do that as well with the date.
+
+Blog Post Generator
+    What makes the actual post
+Blog Page Generator
+    What makes the links to the post
+
+Everything else can be hand done for now.
+
+Gotta test the links generator
+Everything works!
+Now I really want to clean up let me write the steps that I need for this blog engine
+
+daily notes
+|
++--> blog-page.sh
+     |_links.html
+       |
+       +---> combined to page(should just put this in the script)
+     
+
+
+Theory
+--------------------------------------------------------------------------------
+
+I love how Octavia Butlers books read.
+They are made like a blog actually check it out if you get a chance.
+One of the things that I haven't looked into was the main character blogged everyday.
+I want to be like the main character in her book Parable of the Sower.
+So that is why building out the blog is super important.
+</pre>

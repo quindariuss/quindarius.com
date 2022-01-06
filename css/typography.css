@@ -55,4 +55,9 @@ p
 	font-family: OutputSans;
 	font-weight: normal;
 }
-
+pre
+{
+white-space: pre-wrap;
+text-align: left;
+max-width: 80ch;
+}
