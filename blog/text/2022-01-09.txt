@@ -1,0 +1,119 @@
+Sun Jan  9 12:05:53 EST 2022
+--------------------------------------------------------------------------------
+I have decided on a common way to organize the notes that I post here.
+- time-stamp the general musing. 
+- Books will have the name followed by the author
+- Quotes will have a newline then the quote then the source with a '>'
+
+I would love a way to add an email me button with it immediately filling out the subject of the email with the blog post.
+
+I took Octavia outside for a walk without her leash today. 
+Octavia is my pitbull, still needing the DNA test. 
+Mr.early was there with is dog as well and I did not know until later. 
+She bolted toward him at full speed but he grabbed a stick to wane her off. 
+Of course not to hit her unless need be.        
+Luckily she was mighty afraid of the stick and my voice wasn't too happy either and she went back with me and Mr. Early went the other way.  
+
+Common Sense - Thomas Paine
+--------------------------------------------------------------------------------
+I have started reading this book in lieu of starting the reading of American Yawp. 
+It was one of the books mentioned within the American Yawp and only 86 pages(47 pamphlet pages) long, so I decided it was a good detour.
+So far the book is extremely though provoking. 
+After reading Parable of the Sower by Octavia Butler and Atlas Shrugged all of these reading appear to be connected.
+Our maybe its because the authors consider that reason is not the primary mover in the world and that it must be worked for, not to be given for free, and when left without it we happily lay in our ignorance.
+
+Time makes more converts than reason.
+> Paine, Thomas. Common Sense (AmazonClassics Edition) (p. 2). Amazon Classics. Kindle Edition. 
+
+We can stop denying reality or hoping it will go away by magic.
+> Octavia E. Butler. Parable of the Sower (p. 49). Kindle Edition.
+
+Reason is not automatic. Those who deny it cannot be conquered by it. Do not count on them. Leave them alone. 
+> Rand, Ayn. Atlas Shrugged . Penguin Publishing Group. Kindle Edition.
+
+So far within Common Sense, Thomas Paine is discussing the nature of society and of government and how the two come to be.
+He says that society comes from the best of men and government comes from a protection against the worst of man and is solely a necessary evil.
+This much I can agree with, but only this explanation of why the government exist.
+When a government steps outside of it's role over correcting vices and providing justice to those within society that's is when things or awash.
+
+In section 2 of Common Sense he talks about the stupidity of kings that resemble the talks of money that Ayn Rand gives.
+He gives lots of biblical references to why no kings should exist.
+This is interesting because I read about him on Wikipedia and they said that he was hated for his ridicule of Christianity.
+These logical arguments I could agree with as well.
+For blood does not and should not be the marker of some great divinity in man. 
+In money or respect.
+Every man is born equal with equal ability to do harm and good.
+But no allowances should be given on bases of inheritance only upon your sole reason of interacting with the actions of another man. 
+I am saying man here with the meaning of mankind by the way. 
+
+Money
+--------------------------------------------------------------------------------
+Money is dynamic.
+$100 in my hand is not the same $100 to another.
+What makes the distiction of how much that money really is? 
+Knowledge, ability to select what is good over the bad. 
+I have found after getting an apartment I spent around $10,000 on getting and all the materials for living in it.
+I know I can do it incredibly cheaper now.
+Where the $10,000 would feel more like $15,000 in my hands to get the same quality of living.
+That is the dynamic value of money that I am talking about. 
+Knowing what to do is equally as important as having the means to do.
+One without the other makes the other incredibly more expensive.
+
+Match my Mechanic
+--------------------------------------------------------------------------------
+This is the last day. 
+
+First things to do is to make a systemctl service to run the API and start it backup on failures
+
+/lib/systemd/system/api.service
+################################################################################
+[Unit]
+Description=api.is - api for match my mechanic
+Documentation=https://github.com/matchmymechanic/base/tree/master/progress
+After=network.target
+
+[Service]
+Enviroment=NODE_TLS_REJECT_UNAUTHORIZED=0
+Type=simple
+User=root
+ExecStart=/usr/bin/node /home/quindarius/match-my-mechanic/base/api/api.js
+Restart=on-failure
+
+[Install]
+WantedBy=mutli-user.target
+################################################################################
+
+Then I used 
+
+sudo systemctl daemon-reload
+sudo systemctl start api
+
+It failed to start 
+let me try to start it manually, ah yes since where are running as root we will need absolute values within the program.
+Fair enough
+Done and the api is working now, and is automated in case it ever shuts down another service will spawn on failures. 
+Nice.
+
+I make be good for me to make a proxy for the site to give it https
+
+Okay gotta make sure I am spelling correctly just troubleshooted for a miss spelling of Environment. 
+
+Lots of things were done today and so many bugs squashed I really wish I could have documented all of it but let me do what I can
+
+The API was not actually inserting values into it but still returning success codes this was because the express application was not querying the URL parameters but only the body of the message.
+
+This causes the iOS application to not show any of the parameters and causes crashes within the application. 
+
+Also having a too deeply nested list results in it not showing up.
+
+All of the endpoints are in the iOS application to add them now is trivial. 
+At the same time there needs to be a major refactoring of code within the iOS application to would benefit from going from a design instead of creating and design on the fly.
+
+Getting the system service to run with the environment variable was a matter of spelling but still to a while to figure out. 
+
+The API is built to last now. 
+You should not need to touch it unless its absolutely necessary.
+Or you know what you are doing. 
+
+All of these bugs where fixed and ready to deploy.
+Now this is time for that sexy closure.
