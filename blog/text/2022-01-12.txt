@@ -1,0 +1,40 @@
+Wed Jan 12 13:43:43 EST 2022
+--------------------------------------------------------------------------------
+Went to chemisty class this morning and was going to go to lab but they were cancelled so that's pretty awesome.
+With this extra time I am going to focus on getting the code for my interview well into my head.
+
+Looking to make the networking for match my mechanic integrated with combine. 
+I will take me a while but I think it will serve as a huge benfit during the interview.
+I will probably use the playgrounds mode to test all of this before I implement it into the application.
+
+Combine
+--------------------------------------------------------------------------------
+Most of combines features are higher order functions on a collection of objects.
+
+let array = [1,2,3].map{$0 * 2} 
+print(array)
+
+> [2, 4, 6]
+
+Simplest Publisher and Sink imo 
+
+[1, 2, 3]
+    .sink { value in
+        print("\(value)")
+    }
+            
+> 1
+> 2
+> 3
+
+Okay I just learned a bunch more but I don't want to change my code.
+I feel like it would be putting a fake foot forward and I don't want to do it.
+Somebody who does not have morals and googles about some magical code that encompasses all these things will probably get the job. 
+At least I will know I put MY best foot forward.
+
+
+Wed Jan 12 16:14:18 EST 2022
+--------------------------------------------------------------------------------
+A celebration needs people who have something to celebrate. 
+A climax, a moment. 
+
