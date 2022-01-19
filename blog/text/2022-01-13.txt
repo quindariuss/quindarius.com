@@ -28,4 +28,20 @@ Within the book, Blacks in Canada, they talk about a small black boy.
 That was my french translation. 
 Apparently he was the first Black man/Slave in Canada given as a gift.
 
+Mock Interview
+--------------------------------------------------------------------------------
+Goal tomorrow is to impress the interviewer.
+How to impress not a code walk through; its a misnomer. 
 
+Start with showing the production version of the implementation.
+Explain the settings window and the implementations of things within it.
+Then go to your code.
+
+
+Debugging Window
+
+Make sure that when you are not selling you self short
+
+Composable Archicture
+--------------------------------------------------------------------------------
+Gotta read more into this

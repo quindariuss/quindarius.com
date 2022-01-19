@@ -1,0 +1,81 @@
+Tue Jan 18 12:11:16 EST 2022
+--------------------------------------------------------------------------------
+
+Back at school today. 
+Before going to school I cooked my breakfast and lunch.
+Cooking lunch being the cooler of things happening.
+I can estimate the cost of the lunch for year, at least for the hamburger side.
+
+Cost of Hamburgers 
+--------------------------------------------------------------------------------
+Item            Cost        Days
+Buns            $3.99          8
+|__140 Calories  
+Ground Round    $9.00          6  
+|__4 oz - 290 Calories
+
+$13  for a week.
+$676 for a year.
+
+Not bad.
+I also have mac and cheese and applesauce in cups with my lunch.
+I doubt that It will be greater than the $324 dollars for the year. 
+The applesauce a year would cost: 
+
+$6 -> 18
+So I will need 2.9 or 3 sets of that for the year.
+3 * $6 = $18 
+lol.
+
+I would say I can make myself homemade mac and cheese for 14 weeks under $10.
+So the cost per year would be $260. 
+I want to be able to do lunch for under $1000 dollars a year and eat well.
+If I move the goal post to $1500 it would be insanely good.
+But the constraints are good. 
+late for phsyics.
+
+American Yawp
+--------------------------------------------------------------------------------
+A little past the halfway mark of the book.
+I am not into the industrial revolution.
+It seems as though the federalist in the nation were a weak spot in America.
+To still be loyal to the country you defeated is a little weird to me.
+I understand that their were many complications with trade.
+Still there has to have been a way to do the trade in another manner.
+The federalist allowed for *special* trade relations with the crown.
+Anytime I see *special* I worry about the true intentions.
+
+
+Tue Jan 18 14:04:59 EST 2022
+--------------------------------------------------------------------------------
+I calendars would be get documentation tools for the day.
+Instead of planning the future it could help mark the past.
+Maybe a text file with a date time period and activity like: 
+
+
+Tue Jan 18 14:07:09 EST 2022
+|
++Reading American Yawp
+|
+Tue Jan 18 14:07:56 EST 2022
+
+I would like that and then it would be really easy to automate things and back things up to a database of some sort. 
+
+I plan on reading Introduction to Linear Algebra by Serge Lang.
+This will be for my Linear Algebra course with Professor Kang.
+The text is short enough 260 pages.
+At this moment I have ~100 days until final time. 
+Would like to finish the book before finals. 
+Given an hour I could finish 20 pages for sure.
+So it will take me around 13 hours to finish the text book. 
+Split across two weekends that is something I can do.
+The only other course that I kinda did this with was algorithm analysis and I knew the material extremely well.
+
+Will finish my linear algebra homework after my Probability and Data Analysis Class.
+
+
+Tue Jan 18 21:56:59 EST 2022
+--------------------------------------------------------------------------------
+Finished some piano practice and getting in bed to read more American Yawp.
+Octavia, Darby and Athena are home.
+There goes my sleep quality :); the things we do for love.

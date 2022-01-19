@@ -1,0 +1,29 @@
+Fri Jan 14 15:49:14 EST 2022
+--------------------------------------------------------------------------------
+
+
+Interview
+--------------------------------------------------------------------------------
+Force Unwrap 
+    Testing whether it is an actual URL
+        URL
+Closure
+    Waits for the response 
+Singleton
+    Design pattern 
+    A way to instantiate an object.
+    Compostable arch
+
+
+Baseurl 
+   Would clean up a lot of the networking code 
+queryItems 
+    Add them outside of the api
+Stringly typed
+    That is what the post put etc. is set up using the request.http = "PUT"
+    Should use an enum to reduce items that can be misspelled
+
+Meetup 
+    Underdog Developers
+    
+
