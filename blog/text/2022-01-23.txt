@@ -26,10 +26,12 @@ Everything was/is scattered about and there were no real crystallizations.
 
 Plan for the rest of the day:
 -   Get the car tire swapped around.
--   Get outfits picked for everyday of the upcomming week.
--   Get Meal Prepped for the week.
--   Do some homework.
+x   Get outfits picked for everyday of the upcomming week.
+x   Get Meal Prepped for the week.
+x   Do some homework.
 -   write some code.
--   pay some bills.
+x   pay some bills.
 
 I need to find some way to denote a folder shortcut.
+
+

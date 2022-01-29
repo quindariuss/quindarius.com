@@ -1,0 +1,46 @@
+
+Wed Jan 26 11:06:02 EST 2022
+--------------------------------------------------------------------------------
+This morning was not bad but was not good either. 
+I went to bed pretty late last night, 00:01.
+And got up late as well, 08:54.
+I guess it is not the worse but I wish it did not happen like this.
+I want to continuously get up around 06:00.
+
+Still waiting on the decision for the job.
+It is a little nerve wrecking but it is what it is.
+
+I want to get better at typography. 
+
+My chemistry teacher names her cats off of the periodic table. 
+One of the cats is pretty crazy.
+She wants to name that cat after one of the reactionary metals.
+Speaking of chemisty I watched the lecture prior and did not know it!
+
+Getting the electron configuration is pretty fun.
+
+Make sure to get the physics laboratory manual or at least copy someone else's.
+
+Lab instructions: 
+4 different parts with four different measurements. 
+Outcome of learning objectives are important for the Final Exam. 
+Write down all the digits.
+
+Two significant figures on the ruler
+
+              * 
+||||||||||||||||||||||||
+
+* is at 32.0
+
+Density = mass / volume
+
+Write down unknown code: MAX Part One 
+
+
+Wed Jan 26 20:58:47 EST 2022
+--------------------------------------------------------------------------------
+Working on the barcode scanner for my senior project app Shelf.
+Shelf is an application that allows you to see whats on your shelf. 
+By remote tracking of the shelf's items you can save a lot of time. 
+I am working on getting the barcode scanner for the iOS application right now.
