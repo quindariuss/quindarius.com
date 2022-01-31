@@ -1,0 +1,33 @@
+Sun Jan 30 10:54:46 EST 2022
+--------------------------------------------------------------------------------
+
+Got to write it down or I will never truly remember. 
+
+Dinner discussion was around free speech. 
+The conversation started because of the Joe Rogan Anti-Vaccination debacle.
+
+I believe that he should not be silenced.
+Because when you try to silence controversial ideas they get worse.
+That's what I think it is not backed by data.
+If the effects of words happened instantly, I don't think I have the same stance.
+Tough topic.
+
+Vanity gaps just don't work for dwm.c unless I really dive into the source code.
+I will do that later but not today.
+
+Got the CNC machine to cut out hello world.
+Was pretty cool will like to get it to do a spatula soon.
+
+Free speech, do we deserve it? 
+Can it be handed out? 
+Can it be regulated? 
+Who has the power for what should be said? 
+An answer is a lie. 
+Feels like Parable of the Sower where you can't rest on an axiom. 
+God is change in this scenario. 
+Or more appropriately, the truth is changing always.
+It depends on the people and what they believe. 
+And if you think that your beliefs are right.
+That is only half the battle. 
+
+Transparancy in xterm is done with xcompmgr.

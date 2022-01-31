@@ -22,3 +22,94 @@ Getting better but still pretty tough.
 Hard to believe it has only been a month of me practicing paino. 
 
 Want to spend the rest of the day "ricing OpenBSD"
+
+Installing a font: 
+Move into the ~/.font directory
+run fc-cache
+
+List fonts:
+fc-list
+
+
+Website: Books 
+--------------------------------------------------------------------------------
+I understand how my book page is going to work. 
+Well not totally. 
+But I now understand that I will be basically making a compiler for my books. 
+I will have to keep a folder with my books information.
+Making a system for a script to find things might make it easy for me to post them as well. 
+
+Rough Draft: 
+Books(folder)
+|
++-->Author(folder)
+   |
+   +-->Book(folder)
+      |
+      +-->Meta Information(file)
+      |
+      +-->Notes(file)
+      |
+      +-->Quotes(file)
+      |
+      +-->Formats(folder)
+          |
+          +-->Text
+          |
+          +-->PDF
+          |
+          +-->LaTeX
+
+My music folder will follow the same design 
+
+Music(folder)
+|
++-->Artist(folder)
+    |
+    +-->Songs(folder)
+    |
+    +-->Sheet Music(folder)
+    |
+    +-->Albums(folder)
+        |
+        +-->Albums(folder)
+
+It would make sense that my software should follow the same design. 
+
+Software(folder)
+|
++-->Author(folder)
+    |
+    +-->Project(folder)
+        |
+        +-->Source(folder)
+        |
+        +-->Binaries(folder)
+
+While I am here I should think of a way to organize my photos. 
+
+Photos
+|
++-->Year(folder)
+    |
+    +-->Month(folder)
+        |
+        +-->Day(folder)
+            |
+            +-->Photo(file)
+            |
+            +-->Notes(file)
+
+There is another Folder I need to make but do not know how to make it. 
+A reference folder. 
+Almost like an offline Wikipedia that I can search. 
+Maybe even lots of collected data.
+I will do my best. 
+
+Reference(folder)
+|
++-->Subject(folder)
+    |
+    +-->Topic(folder)
+
+Yeah after that everything will get really circular 
