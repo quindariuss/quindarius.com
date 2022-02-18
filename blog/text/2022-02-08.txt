@@ -1,0 +1,37 @@
+1206
+----------
+Started War and Peace today. 
+I don't know how to spell the authors name so I won't try. 
+It is very good starting off. 
+The book, I don't know where it is set to be honest.
+Most of it is in french and I guess they did not want to do a full translation.
+But it is talking about how the party quest are discussing the worlds events.
+Mainly the events surrounding Russia and Napoleon Bonaparte.
+
+Napoleon Bonaparte was a french political and military leader. 
+He rose to power during the french revolution.
+
+I learned about the Eames Chair. 
+It looks very good, something that I will own one day.
+I don't think I want to get a 'real' one. 
+Reason being, it is not produced by the 'real' inventor anymore.
+So any knockoff should be just the same and just as good.
+The cost is about $700 a chair which is okay.
+I will buy two and have them in my living room. 
+Both black and some kind of bright orange cherry wood.
+
+I really want to get the book automation going. 
+
+https://www.googleapis.com/books/v1/volumes?q=isbn:9780307806581
+
+This allows you to use a link to the book by isbn will help getting the meta data in the file. 
+
+In the meta I don't want too much just: 
+Title
+Subtitle
+Author
+Page Count
+
+All I have to do is get that JSON response from this api and pulling those object from the JSON.
+
+Might be able to finish this while I am with Kelsey tonight.

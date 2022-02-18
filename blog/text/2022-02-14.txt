@@ -1,0 +1,29 @@
+Mon Feb 14 13:45:55 EST 2022
+----------------------------
+
+Today I had a meeting with Katherine Mooney and others.
+Mainly about benefits. 
+Talked to rick for a good bit as well after that meeting. 
+
+Got my email but it was a little mangled. 
+They misspelt it as so: 
+lwoods@rekor.ai
+Not a big deal. 
+
+Right now I do not know what I should be doing but I will be just reading the code until I meet with rick again. 
+Have not been given any task yet. 
+
+Updated the company documentation.
+It had myhc.com when it should have been myuhc.com
+
+I would also like to make documentation for what to do when uploading the application via Apple Store Connect. 
+
+To install Xcode and generally a script to get a work environment set up.
+
+First Download from this site the latest version that is not a Beta
+https://developer.apple.com/download/all/?q=Xcode
+
+I don't think you need to install the command line tools but to switch where the tools are. 
+I will have to test this on the new computer. 
+But you should be able to check it with Xcode-select
+and you can also switch Xcode tools with this as well.

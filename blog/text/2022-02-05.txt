@@ -1,0 +1,27 @@
+1753
+----
+New time format on the blog
+Also will have a new underlined heading. 
+
+I learned a lot today here are some cool things that I do not want to lose.
+Ordine, an induction cook top.
+>https://www.fabita.it/it/products/ordine
+A great blog about FreeCad
+>https://yorik.uncreated.net
+
+I did find some other cool stuff but I don't think I need them. 
+
+To add time in vim: 
+put =strftime(\"%H%M\")
+
+To pull up the command history in vim:
+q:
+
+1845:Dinner
+people: Dave Jan Quin
+place: Mercantile Social
+2000:Dinner
+
+2045:Lisa's party
+2200:Lisa's party
+

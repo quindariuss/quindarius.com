@@ -1,0 +1,71 @@
+
+Thu Feb 17 10:29:39 EST 2022
+----------------------------
+Found out that my email is working it is Atlassian that is the problem. 
+Turns out they might have but the email on a suppression list. 
+This will make sure the company does not spend any emails to that email.
+I have filed a ticket with them to get the issue resolved. 
+
+I will continue to work on my progress from yesterday. 
+
+The main issues with this that I am working on are these: 
+Design scan interface 2.0: 
+- Landscape Scanning
+- Landscape Read Confirmation 
+- Landscape Alert Details
+
+Talking about Underdog Devs
+Podcast? 
+Ben has done two podcast.
+
+Landscape view for the camera.
+Different Camera. 
+
+When create your branch 
+naming scheme 
+adding -> feature/[name of feature]
+bug    -> branch/[name of bug fix]
+
+Apple still wants an expired user. 
+
+Email to Ryan Miller about getting access to the BitBucket now.
+
+To get the AVFoundationDevices on . 
+
+ffmpeg -f avfoundation -list_devices true -i ""
+
+Okay so you declare a capture session then you add the inputs and outputs to the session
+
+AVCaptureSession
+|__add audio device
+|__add video device
+
+Creation of a AV Session
+------------------------
+let captureSession = AVCaptureSession()
+
+guard let audioDevice = AVCaptureDevice.default(for: .audio) else { return }
+
+do {
+    let audioInput = try AVCaptureDeviceInput(device: audioDevice)
+    if captureSession.canAddInput(audioInput) {
+        captureSession.addInput(audioInput)
+    }
+} catch {
+    print("error")
+}
+--------------------
+
+What is a blocking call? 
+What is a serial queue? 
+These answer will allow the app to remain smooth. 
+
+In the tutorial for this: 
+2022-02-16.txt:188
+Is claiming that one should put everything that is published on the main thread. 
+
+--------------------
+You do this on the main thread, because any published properties should be set on the main thread.
+--------------------
+
+
