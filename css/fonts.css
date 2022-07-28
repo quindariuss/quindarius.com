@@ -1,5 +1,11 @@
 
 @font-face {
+  src: url('fonts/Chomsky.otf') format("otf");
+  font-family: "Chomsky";
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
   src: url('fonts/OutputSans-Hairline-Edu.woff') format("woff");
   font-family: 'OutputSans';
   font-style: normal;

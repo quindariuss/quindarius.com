@@ -1,26 +1,31 @@
-body
-{
-	background: #F8F8FF;
+body {
+	background: ghostwhite;
 }
-nav
-{
+nav {
 margin-bottom: 1em;
 }
-pre
-{
+pre {
 	text-align: left;
 	max-width: 700px;
 }
-ul
-{
+ul {
 	max-width: 700px;
 }
-li
-{
+li {
+	font-family: OutputSans;
 	text-align: left;
+	max-width: 700px;
 }
-article.h4
-{
+pre code {
+	text-align: left;
+  background-color: #1A1E24;
+  border: 1px solid ghostwhite;
+  color: ghostwhite;
+  border-radius: 10px;
+  display: block;
+  padding: 20px;
+}
+article.h4 {
 	max-width: 700px;
 	font-family: OutputSans;
 	font-weight: 300;
@@ -32,27 +37,23 @@ article.h4
         line-clamp: 3;
    	-webkit-box-orient: vertical;
 }
-a.button
-{
+a.button {
 	 border-radius: 10px;
 	 align-items: left;
   	 border: 1px solid #000000;
   	 padding: 10px;
 	 margin-bottom: 10px;
 }
-details
-{
+details {
 	text-align: left;
 	font-family: OutputSans;
 	font-weight: 300;
 	width: 700;
 }
-nav
-{
+nav {
 	margin-top: none;
 }
-a
-{
+a {
 	font-family: OutputSans;
 	font-size: 14px;
 	font-weight: normal;
@@ -61,12 +62,11 @@ a
 	display: inline-block;
   position: relative;
 }
-a:hover:after{
+a:hover:after {
 	transform: scaleX(1);
   transform-origin: bottom left;
 }
-a:after
-{
+a:after {
 	  content: '';
   position: absolute;
   width: 100%;
@@ -95,21 +95,19 @@ hr:after {
     position: relative;
     top: -13px;
 }
-blockquote,figcaption
-{		
+
+blockquote,figcaption {		
 	text-align: left;
 	max-width: 300;
 	font-family: OutputSans;
 	font-weight: 300;
 	font-size: 12;
 }
-figcaption
-{
+figcaption {
 	text-align: right;
 }
 
-@media (prefers-color-scheme: dark)
-{
+@media (prefers-color-scheme: dark) {
 a:after
 {
 	background-color: #F8F8FF;

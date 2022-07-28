@@ -3,7 +3,7 @@
 }
 h1 
 {
-	font-family: Palatino-Roman;
+	font-family: Chomsky;
 	font-size: 50px;
 	font-weight: 100;
 }
@@ -14,9 +14,9 @@ h1, h2, h3 , h4, h5 ,h6
 h2
 {
 	max-width: 700px;
-	font-family: OutputSans;
+	font-family: Chomsky;
 	font-weight: 500;
-	font-size: 31;
+	font-size: 40;
 }
 h3
 {
