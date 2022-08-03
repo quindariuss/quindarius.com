@@ -26,6 +26,15 @@ h3
 	font-weight: 800;
 	font-size: 28;
 }
+
+blockquote {
+	
+	max-width: 700px;
+	text-align: center;
+	font-family: OutputSans;
+	font-weight: 800;
+	font-size: 18;
+}
 h4
 {
 	max-width: 700px;
