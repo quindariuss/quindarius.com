@@ -1,0 +1,15 @@
+* {
+	background: ghostwhite;
+	color: #1A1E24;
+}
+
+html {
+	max-width: 80ch;
+	margin: auto;
+}
+@media (prefers-color-scheme: dark) {
+	* {
+		color: ghostwhite;
+		background: #1A1E24;
+	}
+}
