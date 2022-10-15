@@ -1,15 +1,42 @@
 * {
 	background: ghostwhite;
 	color: #1A1E24;
+	font-family: Palatino-Roman;
 }
+
+code {
+	font-family: monospace;
+	background-color: #1A1E24;
+	border: 1px solid ghostwhite;
+	color: ghostwhite;
+	border-radius: 10px;
+	display: block;
+	padding: 10px;
+	margin: 20px;
+	white-space: pre-wrap;
+}
+img
+{
+border-radius: 10px;
+max-width: 100%;
+margin: 10px;
+}
+
+
 
 html {
 	max-width: 80ch;
 	margin: auto;
 }
+
+footer {
+	padding-top: 20px;
+}
+
 @media (prefers-color-scheme: dark) {
 	* {
 		color: ghostwhite;
 		background: #1A1E24;
 	}
 }
+
