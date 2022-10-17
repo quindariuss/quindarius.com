@@ -1,0 +1,410 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/base.css" />
+</head>
+
+<body>
+	<nav>
+		<form>
+			<fieldset>
+				<legend>
+					<h1>
+						Quin&apos;darius
+					</h1>
+				</legend>
+				<table>
+					<th>
+						<a href="/timeline.html">
+							timeline
+						</a>
+					</th>
+					<th>
+						|
+					</th>
+					<th>
+						<a href="/projects.html">
+							projects
+						</a>
+					</th>
+					<th>
+						|
+					</th>
+					<th>
+						<a href="/contact.html">
+							contact
+						</a>
+					</th>
+				</table>
+			</fieldset>
+		</form>
+	</nav>
+	<article>
+		<h1>
+			Python, Flask, and SQLite
+		</h1>
+		<aside>
+			<table>
+				<th>
+					<time datetime="10/16/22"> October 16th 2022</time>
+				</th>
+				<th>
+				<th>
+					<a href="mailto:quindarius@hey.com?subject=Python, Flask, and Sqlite">
+						<button>
+							comment
+						</button>
+					</a>
+				</th>
+			</table>
+		</aside>
+		<summary>
+			I am a senior computer science student,
+			so naturally,
+			I will have a senior project class.
+			In said class,
+			we took the prompt of making a mobile application.
+			Involved in that is also creating a backend for it.
+			The team's middle ground language,
+			besides Java,
+			is Python, so that is what we are going with.
+			This is how to set up a bare bones backend in Python.
+		</summary>
+		<h3>
+			Introduction
+		</h3>
+		<p>
+			I am not going to be teaching you python.
+			My deepest condolences.
+			Go to your professor, favorite YouTube channel, or book for that.
+			I am just going to show you how to set up a Flask Server with a SQLite backend.
+			It won't even be a good implementation,
+			but if you are reading this and know how to make it better,
+			shoot me a comment!
+		</p>
+		<h4>
+			Environment
+		</h4>
+		<ul>
+			<li>
+				Python (Version 3 or later)
+			</li>
+			<li>
+				Pip
+			</li>
+			<li>
+				Unix Development Environment
+			</li>
+		</ul>
+		<p>
+			This will work on Windows as well.
+			Unfortunately, since I do not use Windows I will not explain how.
+		</p>
+		<h3>SQLite</h3>
+		<p>
+		It is a simple and battle tested database able to serve the busiest of loads.
+		Also it is portable from what I hear,
+		so it should be painless to move to another database if the need arise.
+		</p>
+		<p>
+			I am going to keep this whole thing really simple.
+			This should <strong>NEVER</strong> be done in production for authentication.
+		</p>
+		<p>
+			First we are making the database called <var>test.db</var>.
+		</p>
+			<code>
+sqlite3 test.db
+<samp>
+<hr  />
+sqlite>
+</samp>
+			</code>
+			<p>
+
+			Then we make a table called <var>users</var>, that have the properties <var>username</var>, and  <var>password</var>.
+			</p>
+			<code>
+sqlite> CREATE TABLE users (
+username VARCHAR(255) PRIMARY KEY,
+password VARCHAR(255) NOT NULL);
+			</code>
+		<h4>
+			CRUD Operations in SQLite
+		</h4>
+		<ul>
+			<li>
+				Create
+			</li>
+			<code>
+INSERT INTO users
+VALUES ("quindarius", "password");
+			</code>
+			<li>
+				Read
+			</li>
+			<code>
+sqlite> select * from users;
+<samp>
+<hr  />
+quindarius|password
+</samp>
+			</code>
+			<li>
+				Update
+			</li>
+			<code>
+sqlite> UPDATE users SET
+username = "quin",
+password = "pass"
+WHERE username = "quindarius";
+			</code>
+			<li>
+				Delete
+			</li>
+			<code>
+sqlite> DELETE FROM users
+WHERE username = "quin";
+			</code>
+		</ul>
+		<h3>
+			Python and Flask
+		</h3>
+		<p>
+			Let us see how to interact with the database with python.
+			Below is the code for the functions.
+		</p>
+		<code>
+import sqlite3
+
+def checkPassword(username: str, password: str):
+	realPassword = cursor
+		.execute("""
+			SELECT password
+			FROM user
+			WHERE username = '%s'
+			"""
+			% (username))
+		.fetchone()
+
+	if realPassword is None:
+		print ("No user")
+		return False
+
+	if realPassword[0] != password:
+		print ("Incorrect Password")
+		return False
+
+	if realPassword[0] == password:
+		print("Successful Login")
+		return True
+
+
+
+def addUser(username: str, password: str):
+	connection = sqlite3.connect("test.db")
+	cursor = connection
+		.cursor()
+	cursor
+		.execute("""
+		INSERT INTO user
+		(username, password)
+		VALUES ('%s', '%s')
+		"""
+		% (username, password))
+
+		</code>
+		<p>
+			Now lets see if it works!
+
+		</p>
+		<code>
+# main.py
+
+import sqlite3
+
+def checkPassword(username: str, password: str):
+	realPassword = cursor
+		.execute("""
+			SELECT password
+			FROM user
+			WHERE username = '%s'
+			"""
+			% (username))
+		.fetchone()
+
+	if realPassword is None:
+		print ("No user")
+		return False
+
+	if realPassword[0] != password:
+		print ("Incorrect Password")
+		return False
+
+	if realPassword[0] == password:
+		print("Successful Login")
+		return True
+
+
+
+def addUser(username: str, password: str):
+	connection = sqlite3.connect("test.db")
+	cursor = connection
+		.cursor()
+	cursor
+		.execute("""
+		INSERT INTO user
+		(username, password)
+		VALUES ('%s', '%s')
+		"""
+		% (username, password))
+
+<ins> checkPassword( username = "quindarius",  password = "password")</ins>
+<ins> addUser( username = "quindarius",  password = "password")</ins>
+<ins> checkPassword( username = "quindarius",  password = "password")</ins>
+<samp>
+<hr  />
+$ No user
+  Successful Login
+</samp>
+		</code>
+		<p>
+			One part left,
+			connecting the code that we just wrote to Flask.
+			First, we have to install Flask.
+		</p>
+		<h4>
+			Installing Flask
+		</h4>
+		<em>Assuming you are in a new project directory</em>
+		<code>
+$ python3 -m venv venv
+$ . venv/bin/activate
+$ pip3 install Flask
+		<samp>
+<hr />
+(venv)$
+			</samp>
+		</code>
+		<p>
+			Now,
+			we will make a couple of updates to our python file to incorporate flask.
+		</p>
+		<code>
+import sqlite3
+<ins> from flask import Flask, request</ins>
+<ins>app = Flask(__name__)</ins>
+
+
+# main.py
+
+import sqlite3
+
+def checkPassword(username: str, password: str):
+	realPassword = cursor
+		.execute("""
+			SELECT password
+			FROM user
+			WHERE username = '%s'
+			"""
+			% (username))
+		.fetchone()
+
+	if realPassword is None:
+		print ("No user")
+		return False
+
+	if realPassword[0] != password:
+		print ("Incorrect Password")
+		return False
+
+	if realPassword[0] == password:
+		print("Successful Login")
+		return True
+
+
+
+def addUser(username: str, password: str):
+	connection = sqlite3.connect("test.db")
+	cursor = connection
+		.cursor()
+	cursor
+		.execute("""
+		INSERT INTO user
+		(username, password)
+		VALUES ('%s', '%s')
+		"""
+		% (username, password))
+
+<ins> @app.route("/signup", methods = ['POST'])</ins>
+<ins> def signUp():</ins>
+<ins>	username = request.args.get('username')</ins>
+<ins>	password = request.args.get('password')</ins>
+<ins>	addUser(username = username, password = password)</ins>
+<ins>	return "success"</ins>
+<ins></ins>
+<ins> @app.route("/login", methods = ['POST'])</ins>
+<ins> def login():</ins>
+<ins>	username = request.args.get('username')</ins>
+<ins>	password = request.args.get('password')</ins>
+<ins>	validLogin = addUser(username = username, password = password)</ins>
+<ins>	if validLogin:</ins>
+<ins>		return "success"</ins>
+<ins>	else:</ins>
+<ins>		return "false", 401</ins>
+		</code>
+		<h4>
+			Running
+		</h4>
+		<code>
+flask --app main.py run
+<samp>
+<hr/>
+* Serving Flask app 'main.py'
+* Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+* Running on http://127.0.0.1:5000
+</samp>
+		</code>
+		<h4>Testing</h4>
+<code>
+curl -X "POST" "http://127.0.0.1:5000/signup"
+-d "username=seniorclass&password=abc123"
+<samp>
+<hr  />
+success
+</samp>
+</code>
+<code>
+curl -X "POST" "http://127.0.0.1:5000/login"
+-d "username=seniorclass&password=abc123"
+<samp>
+<hr  />
+success
+</samp>
+</code>
+<h3>
+	Conclusion
+</h3>
+<p>
+	My goal with this article is simple.
+	Make the hard part,
+	understanding and connecting Python, SQLite, and flask, easy.
+	While keeping the easy part,
+	writing crud functions,
+	easy.
+</p>
+<p>
+	This is only for demonstration purposes.
+	Overly simplified to have the core connections exemplified.
+	I hope you, the reader, have some use for this.
+</p>
+	</article>
+	<footer>
+		<hr />
+		Copyright &copy; 2020-2022 Quin&apos;darius Ali Lyles-Woods. All rights reserved.
+	</footer>
+</body>
+
+</html>

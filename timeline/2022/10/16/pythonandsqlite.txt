@@ -1,0 +1,197 @@
+Python Sqlite and Flask
+
+Summary
+
+I am a senior computer science student,
+so naturally I will have a senior project class.
+In said class we took the prompt of making a mobile application.
+Involved in that is also creating a backend for it.
+The teams middle ground language,
+besides fucking Java,
+is python so that is what we are going with.
+This is how to set up a bare bones backend in Python.
+
+Table of Contents
+TL;DR
+Introduction
+- Environment
+Python and Flask
+Sqlite
+Putting it all together
+Conclusion
+
+
+Introduction
+I am not going to be teaching you python.
+My deepest condolences.
+Go to your professor, favorite YouTube channel, or book for that.
+I am just going to show you how to set up a Flask Server with a Sqlite backend.
+It won't even be a good implementation,
+but if you are reading this and know how to make it better shoot me a comment!
+
+Environment Requirements
+Python version 3 and up
+Pip
+Unix environment ( You can use windows but I am not talking to you, its more like your ease-dropping. )
+
+Python and Pip.
+Figure it out,
+you will find way better information out there than if I tried to tell you.
+
+If you want to install flask, follow these instructions:
+https://flask.palletsprojects.com/en/2.2.x/installation/#install-flask
+
+Let's first make a simple flask application that will make a webpage that says hello world.
+
+Python and Flask
+
+helloworld.py
+-------------------------------
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello_world():
+	return "<p>Hello, World!</p>"
+-------------------------------
+flask --app helloworld.py run
+-------------------------------
+ * Serving Flask app 'main.py'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+-------------------------------
+
+That was pretty simple.
+In reality we are not going to be serving webpages,
+but json data.
+
+but we need some data to serve so we need to look at sqlite.
+
+SQlite
+It is pretty simple and a very solid database able to serve the busiest of sites.
+And is portable from what I hear,
+so it should not hurt to start with sqlite and move to something larger later on.
+
+I am going to keep this whole thing really simple.
+
+If you care about your users,
+But since this is a senior project class to just get a grade lets ride.
+
+we are going to show one table,
+the users table.
+
+This is only going to have the username and password because we want you to not have anything linked to you technically.
+
+We did not tell you to make your username your first and last name.
+you did that under your own volition.
+
+My favorite way of interactive with sqllite is with the command line application.
+I think it is called sqlite3.
+
+so install that, check out sqlites offical page for the installation directions.
+https://www.sqlite.org/index.html
+
+Once you have that fire up your favorite unix enviroment* and get to hacking!
+
+There is something called crud operations. you need to be able to do them to make anything work really. 
+Create
+Read 
+Update 
+Delete
+
+Here is how you do them in sqlite. 
+
+----------------------------------
+quindarius@macbookpro-13:/Users/quindarius
+sqlite3 test.db
+==========================================
+sqlite>
+-------------------------------------------------
+sqlite> CREATE table users (username varchar(255) primary key, password varchar(255) not null);
+
+sqlite> INSERT into users values ("quindarius", "password");
+sqlite> UPDATE users set username = "quin", password = "pass" where username = "quindarius";
+sqlite> DELETE from users where username = "quindarius";
+sqlite> select * from users;
+
+why do we still see and output? 
+because we changed my username to quin!
+Do this to actually delete me. 
+
+sqlite> DELETE from users where username = "quin";
+
+
+okay at this point we can start getting our python up and running. 
+I am simply your quide if you want details of this implementation you will have to look else where. 
+
+------------------------------
+import sqlite3
+import json
+
+def checkPassword(username: str, password: str): 
+	realPassword = cursor
+                    .execute("select password from user where username = '%s'" % (username))
+                    .fetchone()
+
+	if realPassword is None:
+		print ("No user")
+		return False
+
+	if realPassword[0] != password: 
+		print ("Incorrect Password")
+		return False
+
+	if realPassword[0] == password:
+		print("Successful Login")
+		return True
+		
+	
+	
+def addUser(username: str, password: str):
+	connection = sqlite3.connect("test.db")
+	cursor = connection.cursor()
+	cursor.execute("insert into user (username, password) values ('%s', '%s')" % (username, password))
+------------------------------
+
+Here you can see how easy it is to have a password checked in python
+also how easy it is to have a user added 
+
+I connect to the database in the function because I got weird errors otherwise.
+
+After this you would want to use these same functions in a flask application. 
+Like so
+
+
+------------------------------
+from flask import Flask, request
+import sqlite3
+app = Flask(__name__)
+
+@app.route("/signup", methods = ['POST'])
+def signUp():
+    connection = sqlite3.connect("dev.db")
+    cursor = connection.cursor()
+    cursor.execute("insert into user (username, password) values ('%s', '%s')" % (request.args.get('username'), request.args.get('password')))
+    connection.commit()
+    return "success"
+    
+@app.route("/login", methods = ['POST'])
+def login():
+    if checkPassword(username=request.args.get('username'), password=request.args.get('password')):
+        return "User Logged in"
+    else: 
+        print(request.args.get('username'), request.args.get('password'))
+        return "No User or Incorrect Password", 401
+------------------------------
+
+That is all the required code for this to work. 
+Just make sure to make a database and table and you are good to go!
+
+
+            
+
+* <samp> is for code output
+* fuck you nova for quiting after 30 mins of editing, like just don't suck. 

@@ -1,7 +1,0 @@
--rw-r--r--  1 quindarius  staff   387B Jan  3 22:03 changing-brightness.txt
--rw-r--r--  1 quindarius  staff   784B Jan  3 22:03 christmas-list.txt
--rw-r--r--  1 quindarius  staff   8.4K Jan  3 22:03 frank-predictions.txt
--rw-r--r--  1 quindarius  staff   1.3K Jan  3 22:03 hardtimes.txt
--rw-r--r--  1 quindarius  staff    14K Jan  3 22:03 root-evil.txt
--rw-r--r--  1 quindarius  staff   3.6K Jan  3 22:03 social-freedom.txt
--rw-r--r--  1 quindarius  staff   2.8K Jan  3 22:03 website-gameplan.txt

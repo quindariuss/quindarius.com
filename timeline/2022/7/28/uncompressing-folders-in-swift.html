@@ -1,0 +1,182 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/base.css" />
+</head>
+
+<body>
+	<nav>
+		<form>
+			<fieldset>
+				<legend>
+					<h1>
+						Quin&apos;darius
+					</h1>
+				</legend>
+				<table>
+					<th>
+						<a href="/timeline.html">
+							timeline
+						</a>
+					</th>
+					<th>
+						|
+					</th>
+					<th>
+						<a href="/projects.html">
+							projects
+						</a>
+					</th>
+					<th>
+						|
+					</th>
+					<th>
+						<a href="/contact.html">
+							contact
+						</a>
+					</th>
+				</table>
+			</fieldset>
+		</form>
+	</nav>
+	<article>
+		<h1>
+			Uncompressing folders in Swift
+		</h1>
+		<aside>
+			<table>
+				<th>
+					<time datetime="2022-7-28"> July 28th 2022</time>
+				</th>
+				<th>
+				<th>
+					<a href="mailto:quindarius@hey.com?subject=Uncompressing folders in Swift">
+						<button>
+							comment
+						</button>
+					</a>
+				</th>
+			</table>
+		</aside>
+		<summary>
+			So imagine you need to get multiple files and folders from an API.
+			One option for doing so is to get all the file names and request them from what ever file server you are using.
+			This is terrible don't do this.
+			The optimal way is to bundle the entire directory into a compressed format and distribute that one file.
+			Okay great, say you needed these files in an iOS/iPadOS or MacOS application.
+			That means you will need to decompress the files that you received in swift.
+		</summary>
+		<h3>
+			Questions
+		</h3>
+		<p>
+			These are some questions you will need to ask yourself before properly doing this in the way I lay out.
+		</p>
+		<ol>
+			<li>
+				<strong>
+					Where is my compressed folder and where do I want the decompressed folder?
+				</strong>
+			</li>
+			<li>
+				<strong>
+					How do I handle access to the necessary files and data streams?
+				</strong>
+			</li>
+			<li>
+				<strong>
+					How do I process these files and data streams?
+				</strong>
+			</li>
+		</ol>
+		<h3>Answers</h3>
+		<p>
+			<strong>
+				Where is my compressed folder and where do I want the decompressed folder?
+			</strong>
+		</p>
+<code >
+import AppleArchive
+import System
+
+
+let compressedFolderURL = Bundle.main.url(forResource: "compressed", withExtension: "aar")
+
+let compressedFolderFilePath = FilePath(url!.relativePath)
+</code>
+<code>
+let decompressedPath = Bundle
+		.main.resourceURL!
+		.relativePath + "/decompressed/"
+
+if !FileManager
+	.default
+	.fileExists(atPath: decompressedPath) {
+  do {
+	  try FileManager
+	  .default.createDirectory(
+	  	atPath: decompressedPath,
+  withIntermediateDirectories: false)
+  } catch {
+	  fatalError("Unable to create destination directory.")
+	  }
+ }
+
+let decompressedFilePath = FilePath(decompressedPath)
+</code>
+		<p>
+			<strong>
+				How do I handle access to the necessary files and data streams?
+			</strong>
+				<code>
+let readFileStream = ArchiveByteStream.fileStream(
+	path: archiveFilePath,
+	mode: .readOnly,
+	options: [],
+	permissions: FilePermissions(rawValue: 0o644)
+	)
+
+let decompressStream = ArchiveByteStream.decompressionStream(
+	readingFrom: readFileStream!
+	)
+
+let decodeStream = ArchiveStream.decodeStream(
+	readingFrom: decompressStream!
+	)
+
+let extractStream = ArchiveStream.extractStream(
+	extractingTo: decompressedFilePath,
+	flags: [.ignoreOperationNotPermitted]
+	)
+					</code>
+		</p>
+		<p>
+			<strong>
+				How do I process these files and data streams?
+			</strong>
+		</p>
+<code>
+do {
+	try? ArchiveStream.process(readingFrom:
+			decodeStream!,
+			writingTo: extractStream!
+		)
+} catch {
+	print(error)
+}
+</code>
+		<h3>Conclusion</h3>
+		<p>
+			There you have it a all in one guide to opening up folders in swift.
+			I thought this was going to more straight forward, but I guess this isn't <em>bad</em>.
+			Also, heads up you can't do .zip with native swift code non-trivally.
+		</p>
+	</article>
+	<footer>
+		<hr  />
+		Copyright &copy; 2020-2022 Quin&apos;darius Ali Lyles-Woods. All rights reserved.
+	</footer>
+</body>
+
+</html>
