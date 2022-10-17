@@ -22,6 +22,12 @@ max-width: 100%;
 margin: 10px;
 }
 
+samp {
+	font-family: monospace;
+	font-size: large;
+	color: ghostwhite;
+	background: #1A1E24;
+}
 
 
 html {
@@ -31,6 +37,19 @@ html {
 
 footer {
 	padding-top: 20px;
+	text-align: center;
+}
+ins::before {
+	content: "+";
+	font-family: monospace;
+	color: limegreen;
+	background: #1A1E24;
+}
+ins {
+	font-family: monospace;
+	background: #1A1E24;
+	color: ghostwhite;
+	text-decoration: none;
 }
 
 @media (prefers-color-scheme: dark) {
