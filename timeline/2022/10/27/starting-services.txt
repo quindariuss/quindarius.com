@@ -1,0 +1,58 @@
+Starting Services
+
+Sometimes you need to keep that terrible python server have built from my last post running. 
+Or you have a better built server and you want to get it up an going. 
+Let me introduce you to the world of services!
+
+$ man systemctl
+--------------------------------------------------------------------------
+SYSTEMCTL(1)                     systemctl                    SYSTEMCTL(1)
+
+NAME
+       systemctl - Control the systemd system and service manager
+.
+.
+.
+
+This is a tool on linux destops to help you manage your services. 
+
+Service
+    A program that runs in the background outside of the interactive control of system users. 
+
+Useful for running things like api's. 
+
+Steps: 
+    Go to folder with all the services: 
+    $ cd /etc/systemd/system
+
+    Make a file with your service, mine will be an 'api'
+    $ vim api.service
+
+    Write your service file
+
+    api.service
+
+    [Unit]
+    Description=API for Senior Project
+    
+    [Service]
+    User=root
+    WorkingDirectory=/root/api
+    ExecStart=/usr/local/bin/flask --app main run --host=0.0.0.0
+    Restart=always
+    
+    [Install]
+    WantedBy=multi-user.target
+
+    Then reload the dameon
+    $  systemctl daemon-reload
+
+    Start the service
+    $  systemctl start api.service
+
+    Check if it is active
+    $  systemctl status api.service
+
+
+
+

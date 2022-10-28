@@ -1,0 +1,146 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/base.css" />
+</head>
+
+<body>
+	<nav>
+		<form>
+			<fieldset>
+				<legend>
+					<h1>
+						Quin&apos;darius
+					</h1>
+				</legend>
+				<table>
+					<th>
+						<a href="/timeline.html">
+							timeline
+						</a>
+					</th>
+					<th>
+						|
+					</th>
+					<th>
+						<a href="/projects.html">
+							projects
+						</a>
+					</th>
+					<th>
+						|
+					</th>
+					<th>
+						<a href="/contact.html">
+							contact
+						</a>
+					</th>
+				</table>
+			</fieldset>
+		</form>
+	</nav>
+	<article>
+		<h1>
+Starting Services
+</h1>
+
+<p>
+
+Sometimes you need to keep that terrible python server that you have built from my last post running.
+Or you have a better built server and you want to get up an running.
+Let me introduce you to the world of services!
+</p>
+
+<code>
+
+$ man systemctl
+<samp>
+	<hr />
+
+SYSTEMCTL(1)                     systemctl                    SYSTEMCTL(1)
+
+NAME
+	   systemctl - Control the systemd system and service manager
+.
+.
+.
+</samp>
+		</code>
+		<p>
+
+		This is a tool on linux to help you manage your services.
+		</p>
+
+		<p>
+		A
+		<strong>Service </strong>
+			is a program that runs in the background outside of the interactive control of system users.
+
+		Useful for running things like api's.
+		</p>
+
+		<h3>
+		Steps:
+		</h3>
+		<ol>
+			<li>
+			Go to folder with all the services:
+			</li>
+			<code>
+$ cd /etc/systemd/system
+			</code>
+			<li>
+			Make a file with your service, mine will be an 'api'
+			</li>
+			<code>
+$ vim api.service
+			</code>
+			<li>
+			Write your service file
+			</li>
+			<code>
+$ vim api.service
+			<samp>
+				<hr />
+[Unit]
+Description=API for Senior Project
+[Service]
+User=root
+WorkingDirectory=/root/api3
+ExecStart=/usr/local/bin/flask --app main run --host=0.0.0.0
+Restart=always
+[Install]
+WantedBy=multi-user.target
+			</samp>
+			</code>
+			<li>
+			Then reload the dameon
+			</li>
+			<code>
+$  systemctl daemon-reload
+			</code>
+
+			<li>
+			Start the service
+			</li>
+			<code>
+$  start api.service
+			</code>
+			<li>
+
+			Check if it is active
+			</li>
+			<code>
+$  systemctl status api.service
+			</code>
+
+		</ol>
+	</article>
+	<footer>
+		<hr  />
+		Copyright &copy; 2020-2022 Quin&apos;darius Ali Lyles-Woods. All rights reserved.
+	</footer>
+</body>
+
+</html>
